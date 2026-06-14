@@ -1,22 +1,22 @@
 1
 2class Solution {
 3    public int[] twoSum(int[] nums, int target) {
-4        Map<Integer, Integer> map = new HashMap<>();
-5        for(int i=0; i<nums.length; i=i+1) {
-6            int lookingFor = target - nums[i];
-7            if(map.containsKey(lookingFor)) {
-8                return new int[] {
-9                    i,
-10                    map.get(lookingFor)
-11                };
-12                
-13            }
-14            map.put(nums[i],i);
-15            
-16        }
-17        return new int[] {
-18            -1,-1
-19        };
+4
+5        int n= nums.length;
+6
+7        for(int i=0; i<n-1; i++){
+8            for(int j=i+1; j<n; j++){
+9
+10                if(nums[i] + nums[j] == target){
+11                    int ans[] = {i ,j};
+12                    return ans;
+13                }
+14            }
+15        }
+16
+17        int ans[] ={};
+18        return ans;
+19        
 20    }
 21}
 22
