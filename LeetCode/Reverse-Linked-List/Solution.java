@@ -15,15 +15,11 @@
 15            curr = head;
 16
 17        while(curr != null) {
-18            // save next
-19            ListNode next = curr.next;
-20
-21            // reverse the current node 
-22            curr.next = prev;
-23            prev = curr;
-24            curr = next;
-25        }
-26
-27        return prev;
-28    }
-29}
+18            ListNode next = curr.next; 
+19            curr.next = prev;
+20            prev = curr;
+21            curr = next;
+22        }
+23        return prev;
+24    }
+25}
